@@ -1,10 +1,8 @@
 DailyHarbinger::Application.routes.draw do
 
-  resources :alerts
+  get "pages/home"
 
-  resources :users
-  resources :home
-  resources :about
+  get "pages/contact"
 
 
 
