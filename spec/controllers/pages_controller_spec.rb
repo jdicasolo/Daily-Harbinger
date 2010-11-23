@@ -12,12 +12,13 @@ describe PagesController do
 
     it "should have the right title" do
       get 'home'
-      response.should have_selector("li", 
-                                    :content => "Homepage")
+      response.should have_selector("title", 
+                                    :content => "Daily Harbinger | Home")
     end
   end
 
   describe "GET 'contact'" do
+
     it "should be successful" do
       get 'contact'
       response.should be_success
@@ -25,12 +26,13 @@ describe PagesController do
 
     it "should have the right title" do
       get 'contact'
-      response.should have_selector("li",
-                                    :content => "Contact")
+      response.should have_selector("title",
+                                    :content => "Daily Harbinger | Contact")
     end
   end
 
   describe "GET 'about'" do
+
     it "should be successful" do
       get 'about'
       response.should be_success
@@ -38,8 +40,8 @@ describe PagesController do
 
     it "should have the right title" do
       get 'about'
-      response.should have_selector("li",
-                                    :content => "About")
+      response.should have_selector("title",
+                                    :content => "Daily Harbinger | About")
     end
   end
 
