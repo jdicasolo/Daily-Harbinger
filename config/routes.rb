@@ -1,6 +1,9 @@
 DailyHarbinger::Application.routes.draw do
 
-  get "users/new"
+#  get "users/new"
+#  get "users/show"
+
+  resources :users
 
   match '/signup', :to => 'users#new'
 
