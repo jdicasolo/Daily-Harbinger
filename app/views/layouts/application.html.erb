@@ -11,13 +11,21 @@
 
 </head>
 <body>
+
+<section>
+<% flash.each do |key, value| %>
+<div><%= value %></div>
+<% end %>
+</section>
+
 <table width="620" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td style="height: 86px;">
       <table border="0" cellspacing="0" cellpadding="0">
         <tr>
  	  <td width="34%" class="text1">daily<span class="text2">harbinger</span></td>
-	  <td width="66%" class="text3">keeping you up to date with the days <u>most</u> important events</td>
+	  <td width="66%" class="text3">when how 'bout the weather
+  means something</td>
         </tr>
       </table>
     </td>

@@ -17,6 +17,36 @@
     <td width="50">&nbsp;</td>
     <td width="340">
 
+      <h1>Sign up</h1><br /><br />
+
+      <%= form_for(@user) do |f| %> 
+      <%= render 'shared/error_messages' %>
+
+      <div>
+	<%= f.label :name %><br />
+	<%= f.text_field :name %><br /><br />
+      </div>
+
+      <div>
+	<%= f.label :email %><br />
+	<%= f.text_field :email %><br /><br />
+      </div>
+
+      <div>
+	<%= f.label :password %><br />
+	<%= f.text_field :password %><br /><br />
+      </div>
+
+      <div>
+	<%= f.label :password_confirmation, "Confirmation" %><br />
+	<%= f.text_field :password_confirmation %><br /><br /><br />
+      </div>
+
+      <div>
+	<%= f.submit "sign up" %>
+      </div>
+
+      <% end %>
 
     </td>
     <td width="50">&nbsp;</td>
