@@ -14,6 +14,11 @@ describe UsersController do
                   :password_confirmation => "foobar" }
       end
 
+      it "should sign a user in" do
+        post :create, :user => @attr
+        controller.should be_signed_in
+      end
+
       it "should create a user" do
         lambda do
           post :create, :user => @attr
