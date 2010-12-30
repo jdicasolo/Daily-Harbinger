@@ -1,0 +1,46 @@
+<table width="620" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="top">
+    <td width="180">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td><img src="../images/spacer.gif" alt="" width="50" height="60" /></td>
+	</tr>
+	<tr>
+	  <td align="right" class="bg2">
+
+	    <%= render 'layouts/navigation' %>
+
+	  </td>
+	</tr>
+      </table>
+    </td>
+    <td width="50">&nbsp;</td>
+    <td width="340">
+
+<h1>Sign in</h1>
+
+<br /><br />
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+<div>
+  <%= f.label :email %><br /><br />
+  <%= f.text_field :email %><br /><br />
+</div>
+
+<div>
+  <%= f.label :password %><br /><br />
+  <%= f.password_field :password %><br /><br />
+</div>
+
+<div>
+  <%= f.submit "Sign in" %><br /><br />
+</div>
+
+<% end %>
+
+<p>New user? <%= link_to "Sign up", signup_path %></p>
+
+    </td>
+    <td width="50">&nbsp;</td>
+  </tr>
+</table>
